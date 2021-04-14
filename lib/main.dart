@@ -16,7 +16,6 @@ class MyApp extends StatefulWidget {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-
     home: Scaffold(
       body: Center(
         child: Column(
@@ -32,7 +31,17 @@ class MyApp extends StatefulWidget {
           ]
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
+      ),
     ),
   );
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
 }
 
